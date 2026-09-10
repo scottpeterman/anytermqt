@@ -285,7 +285,3 @@ from the Go port in PathfinderSSH rather than from pyte itself.
 
 GPL-3.0. See `LICENSE`.
 
-That is worth reading before building this into something: it is a copyleft
-licence, and linking the widget or importing the Python module puts your
-application under it. Open an issue if that is the only thing standing between
-you and using it.
