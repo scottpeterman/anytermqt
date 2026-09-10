@@ -1,0 +1,144 @@
+! Command: show running-config
+! device: eng-spine-1 (vEOS-lab, EOS-4.33.1F)
+!
+! boot system flash:/vEOS-lab.swi
+!
+no aaa root
+!
+username admin privilege 15 role network-admin secret sha512 $6$6qAtFzQXc57oVBNX$rBBzVUgU8Qy5TlYJIu77t/PjYAmwcpjloDxXah5mSFbxIAlAA7MNuNsdsR1O1AP8KYsFVvynf9SXLv.r.OJQq/
+username cisco privilege 15 role network-admin secret sha512 $6$.sROub9utLmXAjNK$9AZA8nCbx3MOPCGqzLIgvwX9o1otbMNsqW1h0qpoIR1sRMKgwCSFQ9r8FLMQ2zxpVEU4/msreMwdyL4MbZsAE.
+!
+management api http-commands
+   protocol http
+   no shutdown
+!
+no service interface inactive port-id allocation disabled
+!
+transceiver qsfp default-mode 4x10G
+!
+service routing protocols model multi-agent
+!
+hostname eng-spine-1
+ip name-server vrf default 8.8.4.4
+ip name-server vrf default 8.8.8.8
+!
+snmp-server engineID local f5717f0c82f1c3661900
+snmp-server view ALL iso included
+snmp-server view ALLVIEW iso included
+snmp-server community lab ro
+snmp-server community lab_ro ro
+snmp-server group LABSNMP v3 priv read ALLVIEW write ALLVIEW
+snmp-server group cisco v3 priv read ALL
+snmp-server user cisco LABSNMP v3 localized f5717f0c82f1c3661900 auth sha 98d262b236673416e3c4387bb4b1ac893c3a1c95 priv aes 98d262b236673416e3c4387bb4b1ac89
+!
+spanning-tree mode mstp
+spanning-tree mst 0 priority 4096
+!
+system l1
+   unsupported speed action error
+   unsupported error-correction action error
+!
+vlan 11
+   name ENG-Management
+!
+vlan 50
+   name Inter-Spine-L3
+!
+vlan 210
+   name ENG-Servers-1
+!
+vlan 211
+   name ENG-Servers-2
+!
+vlan 212
+   name ENG-Servers-3
+!
+aaa authorization exec default local
+!
+interface Ethernet1
+   description To eng-rtr-1
+   no switchport
+   ip address 172.16.2.2/30
+!
+interface Ethernet2
+   description To eng-spine-2 (L2 trunk + L3 VLAN)
+   switchport trunk allowed vlan 11,50,210-212
+   switchport mode trunk
+!
+interface Ethernet3
+   description To eng-leaf-1
+   switchport trunk allowed vlan 11,210-212
+   switchport mode trunk
+!
+interface Ethernet4
+   description To eng-leaf-2
+   switchport trunk allowed vlan 11,210-212
+   switchport mode trunk
+!
+interface Ethernet5
+   description To eng-leaf-3
+   switchport trunk allowed vlan 11,210-212
+   switchport mode trunk
+!
+interface Ethernet6
+!
+interface Ethernet7
+!
+interface Ethernet8
+!
+interface Ethernet9
+!
+interface Ethernet10
+!
+interface Ethernet11
+!
+interface Ethernet12
+   description "Scott Was Here!"
+!
+interface Management1
+!
+interface Vlan11
+   description Management
+   ip address 172.16.11.2/24
+   vrrp 1 priority-level 110
+   vrrp 1 ipv4 172.16.11.1
+!
+interface Vlan50
+   description Inter-Spine L3 Communication
+   ip address 172.16.50.5/30
+!
+interface Vlan210
+   description ENG-Servers-1
+   ip address 172.16.210.2/24
+   vrrp 1 priority-level 110
+   vrrp 1 ipv4 172.16.210.1
+!
+interface Vlan211
+   description ENG-Servers-2
+   ip address 172.16.211.2/24
+   vrrp 1 priority-level 110
+   vrrp 1 ipv4 172.16.211.1
+!
+interface Vlan212
+   description ENG-Servers-3
+   ip address 172.16.212.2/24
+   vrrp 1 priority-level 110
+   vrrp 1 ipv4 172.16.212.1
+!
+ip routing
+!
+ntp server pool.ntp.org
+!
+router multicast
+   ipv4
+      software-forwarding kernel
+   !
+   ipv6
+      software-forwarding kernel
+!
+router ospf 1
+   router-id 172.16.21.21
+   network 172.16.0.0/16 area 0.0.0.0
+   max-lsa 12000
+!
+end

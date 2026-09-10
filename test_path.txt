@@ -1,0 +1,2 @@
+set "PATH=C:\Qt\6.10.3\msvc2022_64\bin;%PATH%" && set "PYTHONPATH=build\bindings" 
+set "QT_QPA_PLATFORM="

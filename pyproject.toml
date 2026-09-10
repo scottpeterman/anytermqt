@@ -1,0 +1,126 @@
+# pyproject.toml
+#
+# Packaging for the Python extension module. The C++ build is unchanged and
+# unaware of this file: scikit-build-core runs the same CMake the scripts run,
+# then takes what `cmake --install` produced and puts it in a wheel.
+#
+# The wheel does not contain Qt. PySide6 already ships a complete Qt, it is
+# imported first, and its copy wins in the process regardless of what this
+# module linked against -- so vendoring a second Qt here would reproduce, on
+# every user's machine, the exact crash that scripts/env.sh exists to prevent.
+# What that costs is the exact pin below.
+#
+#   scripts/wheel.sh / scripts/wheel.bat    build and verify a wheel
+#   pip wheel . -w dist                     the same thing without the checks
+
+[build-system]
+requires = [
+    "scikit-build-core>=0.10",
+    # Build-time only: the generator parses the headers and emits the wrappers.
+    # These are pinned to the same version as the runtime dependency below, and
+    # matter only when pip builds in an isolated environment. The wheel scripts
+    # pass --no-build-isolation and use the interpreter env.sh already verified,
+    # which is faster and removes one place for the version to disagree.
+    "pyside6==6.10.3",
+    "shiboken6==6.10.3",
+    "shiboken6_generator==6.10.3",
+]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "anytermqt"
+version = "0.1.0"
+description = "A native Qt terminal widget for PySide6"
+readme = "README.md"
+# SPDX expression rather than a table. `license = { file = "LICENSE" }` and the
+# `License ::` classifier are both deprecated under PEP 639; setuptools names
+# February 2027 as the point where they stop working. Nothing rejects them
+# today, but the replacement is a one-line change and this file gets read by
+# people deciding whether to copy the approach.
+license = "GPL-3.0-only"
+license-files = ["LICENSE"]
+
+# Upper bound mirrors the PySide6 pin below. Without it, pip on 3.15 accepts
+# this package and then fails resolving PySide6 -- an error naming the wrong
+# project, for a reason that is stated right here. The wheels are cp39-abi3
+# and do run on 3.9; the floor is 3.10 because that is the lowest anything has
+# actually been built and tested on.
+requires-python = ">=3.10,<3.15"
+authors = [{ name = "Scott Peterman" }]
+keywords = ["terminal", "qt", "pyside6", "vt100", "pty", "console"]
+
+# Exact, not >=. The module links Qt and Shiboken directly, neither of which
+# promises binary compatibility across a minor release, and the failure mode
+# for a mismatch is a crash on import rather than a resolver error. A new
+# PySide6 means a new wheel.
+#
+# This version must equal the Qt the wheel was built against. The wheel
+# scripts refuse to build when it does not.
+dependencies = ["PySide6==6.10.3"]
+
+# No `License ::` entry: PEP 639 deprecates license classifiers in favour of
+# the SPDX expression above, and carrying both invites them to disagree.
+# The per-minor-version entries are what PyPI's sidebar filters on.
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: X11 Applications :: Qt",
+    "Environment :: MacOS X",
+    "Environment :: Win32 (MS Windows)",
+    "Intended Audience :: Developers",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS :: MacOS X",
+    "Programming Language :: C++",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Terminals :: Terminal Emulators/X Terminals",
+]
+
+[project.urls]
+Homepage = "https://github.com/scottpeterman/anytermqt"
+Source = "https://github.com/scottpeterman/anytermqt"
+Issues = "https://github.com/scottpeterman/anytermqt/issues"
+
+[tool.scikit-build]
+cmake.version = ">=3.21"
+cmake.build-type = "Release"
+
+# The __init__.py side of the package. It lives under python/ rather than at
+# the repository root on purpose: a top-level anytermqt/ directory would
+# shadow the extension module for anyone running Python from the checkout,
+# including scripts/run-py.sh, which puts build/bindings on PYTHONPATH and
+# expects to find the .so there and nothing else named anytermqt.
+wheel.packages = ["python/anytermqt"]
+wheel.py-api = "cp39"
+
+
+# Out of the way of the development tree. build/ is where env.sh looks for the
+# cached Qt, and it reads build/CMakeCache.txt specifically, so a sibling
+# directory here does not interfere. Keeping it inside the repo rather than in
+# a temp directory means the generator does not re-run on every wheel build --
+# it is the slowest step by a wide margin.
+build-dir = "build/wheel-{wheel_tag}"
+
+sdist.exclude = [
+    "build/", "dist/", ".github/", "screenshots/",
+    "*.log", "out.txt", "test_path.txt", "*.swp",
+]
+
+[tool.scikit-build.cmake.define]
+BUILD_BINDINGS = "ON"
+BUILD_WIDGET = "ON"
+# Nothing here needs the demo application or the test suites. The core is
+# tested by the ordinary build; a wheel build is not the place to re-verify it.
+QTPYTE_BUILD_APP = "OFF"
+QTPYTE_BUILD_TESTS = "OFF"
+PYTE_BUILD_TESTS = "OFF"
+PYTE_BUILD_TOOLS = "OFF"
+
+# CMAKE_PREFIX_PATH is deliberately absent. It is the one setting that differs
+# per machine, and the wheel scripts pass it from QT_DIR:
+#     pip wheel . -C cmake.define.CMAKE_PREFIX_PATH="$QT_DIR"

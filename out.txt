@@ -1,0 +1,104 @@
+Internal ctest changing into directory: C:/Users/speterman/github/anytermqt/build-cpp
+Test project C:/Users/speterman/github/anytermqt/build-cpp
+    Start 4: qtpyte_tests
+1/1 Test #4: qtpyte_tests .....................***Failed   10.15 sec
+********* Start testing of TerminalTest *********
+Config: Using QtTest library 6.10.3, Qt 6.10.3 (x86_64-little_endian-llp64 shared (dynamic) release build; by MSVC 2022), windows 11
+PASS   : TerminalTest::initTestCase()
+QWARN  : TerminalTest::pty_runs_a_command() QFontDatabase: Cannot find font directory C:/Qt/6.10.3/msvc2022_64/lib/fonts.
+Note that Qt no longer ships fonts. Deploy some (from https://dejavu-fonts.github.io/ for example) or switch to fontconfig.
+Microsoft Windows [Version 10.0.26200.7840]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\speterman\github\anytermqt\build-cpp\qtpyte\tests>lab-marker-one
+
+C:\Users\speterman\github\anytermqt\build-cpp\qtpyte\tests>PASS   : TerminalTest::pty_runs_a_command()
+Microsoft Windows [Version 10.0.26200.7840]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\speterman\github\anytermqt\build-cpp\qtpyte\tests>
+Status for device CON:
+----------------------
+    Lines:          21
+    Columns:        32
+    Keyboard rate:  31
+    Keyboard delay: 1
+    Code page:      437
+
+
+C:\Users\speterman\github\anytermqt\build-cpp\qtpyte\tests>FAIL!  : TerminalTest::resize_reaches_the_child() 'waitFor([&] { const QString text = term.screenText(); return text.contains(QStringLiteral("Columns")) && text.contains(expected); })' returned FALSE. (child never reported 32 columns; screen was:
+mode con                        
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                )
+C:\Users\speterman\github\anytermqt\qtpyte\tests\test_terminal.cpp(198) : failure location
+PASS   : TerminalTest::output_fills_scrollback()
+PASS   : TerminalTest::scrollbar_tracks_history()
+PASS   : TerminalTest::scrolling_back_then_typing_returns_to_live()
+PASS   : TerminalTest::alternate_screen_leaves_scrollback_alone()
+PASS   : TerminalTest::colours_reach_the_pixels()
+Microsoft Windows [Version 10.0.26200.7840]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\speterman\github\anytermqt\build-cpp\qtpyte\tests>PASS   : TerminalTest::child_exit_is_reported()
+PASS   : TerminalTest::keymap_sends_what_a_terminal_sends()
+PASS   : TerminalTest::keymap_follows_cursor_key_mode()
+PASS   : TerminalTest::glyphs_land_on_the_cell_grid()
+PASS   : TerminalTest::truecolour_reaches_the_pixels()
+Microsoft Windows [Version 10.0.26200.7840]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\speterman\github\anytermqt\build-cpp\qtpyte\tests>colorterm=[truecolor] term=[xterm-256color]
+
+C:\Users\speterman\github\anytermqt\build-cpp\qtpyte\tests>FAIL!  : TerminalTest::child_is_told_truecolour_is_available() 'waitFor([&] { return screenContains(term, QStringLiteral("colorterm=[truecolor]")); })' returned FALSE. (COLORTERM never reached the child; screen was:
+echo colorterm=[%COLORTERM%] term=[%TERM%]           
+                                                     
+                                                     
+                                                     
+                                                     
+                                                     
+                                                     
+                                                     
+                                                     
+                                                     
+                                                     
+                                                     
+                                                     
+                                                     
+                                                     
+                                                     
+                                                     
+                                                     
+                                                     
+                                                     
+                                                     )
+C:\Users\speterman\github\anytermqt\qtpyte\tests\test_terminal.cpp(493) : failure location
+PASS   : TerminalTest::cleanupTestCase()
+Totals: 13 passed, 2 failed, 0 skipped, 0 blacklisted, 10128ms
+********* Finished testing of TerminalTest *********
+
+
+0% tests passed, 1 tests failed out of 1
+
+Total Test time (real) =  10.16 sec
+
+The following tests FAILED:
+	  4 - qtpyte_tests (Failed)
+Errors while running CTest

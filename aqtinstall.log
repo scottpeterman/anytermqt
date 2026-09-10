@@ -1,0 +1,294 @@
+2026-08-26 16:22:42,445 - aqt.helper - DEBUG - helper 15444 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_683/qt6_683/Updates.xml.sha256
+2026-08-26 16:23:13,578 - aqt.main - INFO - installer 14736 aqtinstall(aqt) v3.3.0 on Python 3.10.11 [CPython MSC v.1929 64 bit (AMD64)]
+2026-08-26 16:23:13,578 - aqt.helper - DEBUG - helper 14736 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_683/qt6_683/Updates.xml.sha256
+2026-08-26 16:23:15,025 - aqt.helper - DEBUG - helper 14736 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/extensions/qtwebengine/683/msvc2022_64/Updates.xml.sha256
+2026-08-26 16:23:16,293 - aqt.archives - INFO - archives 14736 Found extension qtwebengine
+2026-08-26 16:23:16,293 - aqt.helper - DEBUG - helper 14736 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/extensions/qtpdf/683/msvc2022_64/Updates.xml.sha256
+2026-08-26 16:23:17,567 - aqt.archives - INFO - archives 14736 Found extension qtpdf
+2026-08-26 16:23:17,845 - aqt.helper - DEBUG - helper 21388 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_683/qt6_683/qt.qt6.683.win64_msvc2022_64/6.8.3-0-202503201308qtbase-Windows-Windows_11_23H2-MSVC2022-Windows-Windows_11_23H2-X86_64.7z.sha256
+2026-08-26 16:23:18,476 - aqt.helper - INFO - helper 21388 Downloading qtbase...
+2026-08-26 16:23:18,476 - aqt.installer - DEBUG - installer 21388 Download URL: https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_683/qt6_683/qt.qt6.683.win64_msvc2022_64/6.8.3-0-202503201308qtbase-Windows-Windows_11_23H2-MSVC2022-Windows-Windows_11_23H2-X86_64.7z
+2026-08-26 16:23:19,115 - aqt.helper - DEBUG - helper 21388 Asked to redirect(302) to: https://qt.mirror.constant.com/online/qtsdkrepository/windows_x86/desktop/qt6_683/qt6_683/qt.qt6.683.win64_msvc2022_64/6.8.3-0-202503201308qtbase-Windows-Windows_11_23H2-MSVC2022-Windows-Windows_11_23H2-X86_64.7z
+2026-08-26 16:23:19,115 - aqt.helper - INFO - helper 21388 Redirected: qt.mirror.constant.com
+2026-08-26 16:23:25,643 - aqt.installer - INFO - installer 21388 Finished installation of qtbase-Windows-Windows_11_23H2-MSVC2022-Windows-Windows_11_23H2-X86_64.7z in 7.79961130
+2026-08-26 16:23:25,751 - aqt.updater - INFO - updater 14736 Patching C:\Qt\6.8.3\msvc2022_64\bin\qmake.exe
+2026-08-26 16:23:25,762 - aqt.updater - INFO - updater 14736 Patching C:\Qt\6.8.3\msvc2022_64\lib\Qt6Concurrent.prl
+2026-08-26 16:23:25,766 - aqt.updater - INFO - updater 14736 Patching C:\Qt\6.8.3\msvc2022_64\lib\Qt6Concurrentd.prl
+2026-08-26 16:23:25,769 - aqt.updater - INFO - updater 14736 Patching C:\Qt\6.8.3\msvc2022_64\lib\Qt6Core.prl
+2026-08-26 16:23:25,775 - aqt.updater - INFO - updater 14736 Patching C:\Qt\6.8.3\msvc2022_64\lib\Qt6Cored.prl
+2026-08-26 16:23:25,779 - aqt.updater - INFO - updater 14736 Patching C:\Qt\6.8.3\msvc2022_64\lib\Qt6DBus.prl
+2026-08-26 16:23:25,779 - aqt.updater - INFO - updater 14736 Patching C:\Qt\6.8.3\msvc2022_64\lib\Qt6DBusd.prl
+2026-08-26 16:23:25,779 - aqt.updater - INFO - updater 14736 Patching C:\Qt\6.8.3\msvc2022_64\lib\Qt6DeviceDiscoverySupport.prl
+2026-08-26 16:23:25,792 - aqt.updater - INFO - updater 14736 Patching C:\Qt\6.8.3\msvc2022_64\lib\Qt6DeviceDiscoverySupportd.prl
+2026-08-26 16:23:25,795 - aqt.updater - INFO - updater 14736 Patching C:\Qt\6.8.3\msvc2022_64\lib\Qt6EntryPoint.prl
+2026-08-26 16:23:25,795 - aqt.updater - INFO - updater 14736 Patching C:\Qt\6.8.3\msvc2022_64\lib\Qt6EntryPointd.prl
+2026-08-26 16:23:25,806 - aqt.updater - INFO - updater 14736 Patching C:\Qt\6.8.3\msvc2022_64\lib\Qt6ExampleIcons.prl
+2026-08-26 16:23:25,811 - aqt.updater - INFO - updater 14736 Patching C:\Qt\6.8.3\msvc2022_64\lib\Qt6ExampleIconsd.prl
+2026-08-26 16:23:25,811 - aqt.updater - INFO - updater 14736 Patching C:\Qt\6.8.3\msvc2022_64\lib\Qt6ExamplesAssetDownloader.prl
+2026-08-26 16:23:25,818 - aqt.updater - INFO - updater 14736 Patching C:\Qt\6.8.3\msvc2022_64\lib\Qt6ExamplesAssetDownloaderd.prl
+2026-08-26 16:23:25,818 - aqt.updater - INFO - updater 14736 Patching C:\Qt\6.8.3\msvc2022_64\lib\Qt6FbSupport.prl
+2026-08-26 16:23:25,827 - aqt.updater - INFO - updater 14736 Patching C:\Qt\6.8.3\msvc2022_64\lib\Qt6FbSupportd.prl
+2026-08-26 16:23:25,830 - aqt.updater - INFO - updater 14736 Patching C:\Qt\6.8.3\msvc2022_64\lib\Qt6Gui.prl
+2026-08-26 16:23:25,836 - aqt.updater - INFO - updater 14736 Patching C:\Qt\6.8.3\msvc2022_64\lib\Qt6Guid.prl
+2026-08-26 16:23:25,840 - aqt.updater - INFO - updater 14736 Patching C:\Qt\6.8.3\msvc2022_64\lib\Qt6Network.prl
+2026-08-26 16:23:25,842 - aqt.updater - INFO - updater 14736 Patching C:\Qt\6.8.3\msvc2022_64\lib\Qt6Networkd.prl
+2026-08-26 16:23:25,848 - aqt.updater - INFO - updater 14736 Patching C:\Qt\6.8.3\msvc2022_64\lib\Qt6OpenGL.prl
+2026-08-26 16:23:25,852 - aqt.updater - INFO - updater 14736 Patching C:\Qt\6.8.3\msvc2022_64\lib\Qt6OpenGLd.prl
+2026-08-26 16:23:25,858 - aqt.updater - INFO - updater 14736 Patching C:\Qt\6.8.3\msvc2022_64\lib\Qt6OpenGLWidgets.prl
+2026-08-26 16:23:25,861 - aqt.updater - INFO - updater 14736 Patching C:\Qt\6.8.3\msvc2022_64\lib\Qt6OpenGLWidgetsd.prl
+2026-08-26 16:23:25,861 - aqt.updater - INFO - updater 14736 Patching C:\Qt\6.8.3\msvc2022_64\lib\Qt6PrintSupport.prl
+2026-08-26 16:23:25,869 - aqt.updater - INFO - updater 14736 Patching C:\Qt\6.8.3\msvc2022_64\lib\Qt6PrintSupportd.prl
+2026-08-26 16:23:25,873 - aqt.updater - INFO - updater 14736 Patching C:\Qt\6.8.3\msvc2022_64\lib\Qt6Sql.prl
+2026-08-26 16:23:25,877 - aqt.updater - INFO - updater 14736 Patching C:\Qt\6.8.3\msvc2022_64\lib\Qt6Sqld.prl
+2026-08-26 16:23:25,877 - aqt.updater - INFO - updater 14736 Patching C:\Qt\6.8.3\msvc2022_64\lib\Qt6Test.prl
+2026-08-26 16:23:25,877 - aqt.updater - INFO - updater 14736 Patching C:\Qt\6.8.3\msvc2022_64\lib\Qt6Testd.prl
+2026-08-26 16:23:25,889 - aqt.updater - INFO - updater 14736 Patching C:\Qt\6.8.3\msvc2022_64\lib\Qt6Widgets.prl
+2026-08-26 16:23:25,895 - aqt.updater - INFO - updater 14736 Patching C:\Qt\6.8.3\msvc2022_64\lib\Qt6Widgetsd.prl
+2026-08-26 16:23:25,898 - aqt.updater - INFO - updater 14736 Patching C:\Qt\6.8.3\msvc2022_64\lib\Qt6Xml.prl
+2026-08-26 16:23:25,900 - aqt.updater - INFO - updater 14736 Patching C:\Qt\6.8.3\msvc2022_64\lib\Qt6Xmld.prl
+2026-08-26 16:23:25,905 - aqt.main - INFO - installer 14736 Finished installation
+2026-08-26 16:23:25,905 - aqt.main - INFO - installer 14736 Time elapsed: 12.32660450 second
+2026-08-26 10:53:25,132 - aqt.main - INFO - installer 8116 aqtinstall(aqt) v3.3.0 on Python 3.10.11 [CPython MSC v.1929 64 bit (AMD64)]
+2026-08-26 10:53:25,132 - aqt.main - ERROR - installer 8116 Please supply a target architecture.
+2026-08-26 10:53:49,226 - aqt.main - INFO - installer 8568 aqtinstall(aqt) v3.3.0 on Python 3.10.11 [CPython MSC v.1929 64 bit (AMD64)]
+2026-08-26 10:53:49,226 - aqt.helper - DEBUG - helper 8568 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6112/qt6_6112/Updates.xml.sha256
+2026-08-26 10:53:49,935 - aqt.helper - DEBUG - helper 8568 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6112/qt6_6112/Updates.xml.sha256
+2026-08-26 10:53:50,584 - aqt.helper - DEBUG - helper 8568 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6112/qt6_6112/Updates.xml.sha256
+2026-08-26 10:53:51,258 - aqt.helper - DEBUG - helper 8568 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6112/qt6_6112/Updates.xml.sha256
+2026-08-26 10:53:51,870 - aqt.helper - DEBUG - helper 8568 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6112/qt6_6112/Updates.xml.sha256
+2026-08-26 10:53:52,485 - aqt.archives - WARNING - archives 8568 Failed to download checksum for the file 'online/qtsdkrepository/windows_x86/desktop/qt6_6112/qt6_6112/Updates.xml'. This may happen on unofficial mirrors.
+2026-08-26 10:53:53,101 - aqt.main - ERROR - installer 8568 Failed to locate XML data for Qt version '6.11.2'.
+==============================Suggested follow-up:==============================
+* Please use 'aqt list-qt windows desktop' to show versions available.
+2026-08-26 10:54:32,455 - aqt.main - INFO - installer 6380 aqtinstall(aqt) v3.3.0 on Python 3.10.11 [CPython MSC v.1929 64 bit (AMD64)]
+2026-08-26 10:54:32,455 - aqt.helper - DEBUG - helper 6380 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6111/qt6_6111/Updates.xml.sha256
+2026-08-26 10:54:33,233 - aqt.helper - DEBUG - helper 6380 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6111/qt6_6111/Updates.xml.sha256
+2026-08-26 10:54:33,908 - aqt.helper - DEBUG - helper 6380 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6111/qt6_6111/Updates.xml.sha256
+2026-08-26 10:54:34,530 - aqt.helper - DEBUG - helper 6380 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6111/qt6_6111/Updates.xml.sha256
+2026-08-26 10:54:35,194 - aqt.helper - DEBUG - helper 6380 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6111/qt6_6111/Updates.xml.sha256
+2026-08-26 10:54:35,822 - aqt.archives - WARNING - archives 6380 Failed to download checksum for the file 'online/qtsdkrepository/windows_x86/desktop/qt6_6111/qt6_6111/Updates.xml'. This may happen on unofficial mirrors.
+2026-08-26 10:54:36,433 - aqt.main - ERROR - installer 6380 Failed to locate XML data for Qt version '6.11.1'.
+==============================Suggested follow-up:==============================
+* Please use 'aqt list-qt windows desktop' to show versions available.
+2026-08-26 10:55:54,313 - aqt.main - INFO - installer 3524 aqtinstall(aqt) v3.3.0 on Python 3.10.11 [CPython MSC v.1929 64 bit (AMD64)]
+2026-08-26 10:55:54,313 - aqt.helper - DEBUG - helper 3524 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6112/qt6_6112/Updates.xml.sha256
+2026-08-26 10:55:54,988 - aqt.helper - DEBUG - helper 3524 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6112/qt6_6112/Updates.xml.sha256
+2026-08-26 10:55:55,621 - aqt.helper - DEBUG - helper 3524 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6112/qt6_6112/Updates.xml.sha256
+2026-08-26 10:55:56,232 - aqt.helper - DEBUG - helper 3524 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6112/qt6_6112/Updates.xml.sha256
+2026-08-26 10:55:56,841 - aqt.helper - DEBUG - helper 3524 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6112/qt6_6112/Updates.xml.sha256
+2026-08-26 10:55:57,481 - aqt.archives - WARNING - archives 3524 Failed to download checksum for the file 'online/qtsdkrepository/windows_x86/desktop/qt6_6112/qt6_6112/Updates.xml'. This may happen on unofficial mirrors.
+2026-08-26 10:55:58,155 - aqt.main - ERROR - installer 3524 Failed to locate XML data for Qt version '6.11.2'.
+==============================Suggested follow-up:==============================
+* Please use 'aqt list-qt windows desktop' to show versions available.
+2026-08-26 10:56:17,618 - aqt.main - INFO - installer 20536 aqtinstall(aqt) v3.3.0 on Python 3.10.11 [CPython MSC v.1929 64 bit (AMD64)]
+2026-08-26 10:56:17,618 - aqt.helper - DEBUG - helper 20536 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6112/qt6_6112/Updates.xml.sha256
+2026-08-26 10:56:18,274 - aqt.helper - DEBUG - helper 20536 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6112/qt6_6112/Updates.xml.sha256
+2026-08-26 10:56:18,906 - aqt.helper - DEBUG - helper 20536 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6112/qt6_6112/Updates.xml.sha256
+2026-08-26 10:56:19,494 - aqt.helper - DEBUG - helper 20536 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6112/qt6_6112/Updates.xml.sha256
+2026-08-26 10:56:20,140 - aqt.helper - DEBUG - helper 20536 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6112/qt6_6112/Updates.xml.sha256
+2026-08-26 10:56:20,753 - aqt.archives - WARNING - archives 20536 Failed to download checksum for the file 'online/qtsdkrepository/windows_x86/desktop/qt6_6112/qt6_6112/Updates.xml'. This may happen on unofficial mirrors.
+2026-08-26 10:56:21,382 - aqt.main - ERROR - installer 20536 Failed to locate XML data for Qt version '6.11.2'.
+==============================Suggested follow-up:==============================
+* Please use 'aqt list-qt windows desktop' to show versions available.
+2026-08-26 10:57:03,050 - aqt.helper - DEBUG - helper 8232 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6112/qt6_6112/Updates.xml.sha256
+2026-08-26 10:57:03,710 - aqt.helper - DEBUG - helper 8232 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6112/qt6_6112/Updates.xml.sha256
+2026-08-26 10:57:04,295 - aqt.helper - DEBUG - helper 8232 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6112/qt6_6112/Updates.xml.sha256
+2026-08-26 10:57:04,894 - aqt.helper - DEBUG - helper 8232 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6112/qt6_6112/Updates.xml.sha256
+2026-08-26 10:57:05,520 - aqt.helper - DEBUG - helper 8232 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6112/qt6_6112/Updates.xml.sha256
+2026-08-26 10:57:06,187 - aqt.main - ERROR - installer 8232 Failed to download checksum for the file 'Updates.xml' from mirrors '['https://download.qt.io']
+==============================Suggested follow-up:==============================
+* Check your internet connection
+* Consider modifying `requests.max_retries_to_retrieve_hash` in settings.ini
+* Consider modifying `mirrors.trusted_mirrors` in settings.ini (see https://aqtinstall.readthedocs.io/en/stable/configuration.html#configuration)
+* Please use 'aqt list-qt windows desktop' to show versions of Qt available.
+2026-08-26 10:57:11,182 - aqt.helper - DEBUG - helper 8940 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6112/qt6_6112/Updates.xml.sha256
+2026-08-26 10:57:11,891 - aqt.helper - DEBUG - helper 8940 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6112/qt6_6112/Updates.xml.sha256
+2026-08-26 10:57:12,533 - aqt.helper - DEBUG - helper 8940 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6112/qt6_6112/Updates.xml.sha256
+2026-08-26 10:57:13,163 - aqt.helper - DEBUG - helper 8940 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6112/qt6_6112/Updates.xml.sha256
+2026-08-26 10:57:13,802 - aqt.helper - DEBUG - helper 8940 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6112/qt6_6112/Updates.xml.sha256
+2026-08-26 10:57:14,420 - aqt.main - ERROR - installer 8940 Failed to download checksum for the file 'Updates.xml' from mirrors '['https://download.qt.io']
+==============================Suggested follow-up:==============================
+* Check your internet connection
+* Consider modifying `requests.max_retries_to_retrieve_hash` in settings.ini
+* Consider modifying `mirrors.trusted_mirrors` in settings.ini (see https://aqtinstall.readthedocs.io/en/stable/configuration.html#configuration)
+* Please use 'aqt list-qt windows desktop' to show versions of Qt available.
+2026-08-26 10:57:59,635 - aqt.main - INFO - installer 11268 aqtinstall(aqt) v3.3.0 on Python 3.10.11 [CPython MSC v.1929 64 bit (AMD64)]
+2026-08-26 10:57:59,635 - aqt.helper - DEBUG - helper 11268 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6111/qt6_6111/Updates.xml.sha256
+2026-08-26 10:58:00,386 - aqt.helper - DEBUG - helper 11268 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6111/qt6_6111/Updates.xml.sha256
+2026-08-26 10:58:01,014 - aqt.helper - DEBUG - helper 11268 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6111/qt6_6111/Updates.xml.sha256
+2026-08-26 10:58:01,683 - aqt.helper - DEBUG - helper 11268 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6111/qt6_6111/Updates.xml.sha256
+2026-08-26 10:58:02,358 - aqt.helper - DEBUG - helper 11268 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6111/qt6_6111/Updates.xml.sha256
+2026-08-26 10:58:02,967 - aqt.archives - WARNING - archives 11268 Failed to download checksum for the file 'online/qtsdkrepository/windows_x86/desktop/qt6_6111/qt6_6111/Updates.xml'. This may happen on unofficial mirrors.
+2026-08-26 10:58:03,568 - aqt.main - ERROR - installer 11268 Failed to locate XML data for Qt version '6.11.1'.
+==============================Suggested follow-up:==============================
+* Please use 'aqt list-qt windows desktop' to show versions available.
+2026-08-26 10:58:14,923 - aqt.main - INFO - installer 4980 aqtinstall(aqt) v3.3.0 on Python 3.10.11 [CPython MSC v.1929 64 bit (AMD64)]
+2026-08-26 10:58:14,932 - aqt.helper - DEBUG - helper 4980 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6110/qt6_6110/Updates.xml.sha256
+2026-08-26 10:58:15,573 - aqt.helper - DEBUG - helper 4980 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6110/qt6_6110/Updates.xml.sha256
+2026-08-26 10:58:16,243 - aqt.helper - DEBUG - helper 4980 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6110/qt6_6110/Updates.xml.sha256
+2026-08-26 10:58:16,849 - aqt.helper - DEBUG - helper 4980 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6110/qt6_6110/Updates.xml.sha256
+2026-08-26 10:58:17,457 - aqt.helper - DEBUG - helper 4980 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6110/qt6_6110/Updates.xml.sha256
+2026-08-26 10:58:18,118 - aqt.archives - WARNING - archives 4980 Failed to download checksum for the file 'online/qtsdkrepository/windows_x86/desktop/qt6_6110/qt6_6110/Updates.xml'. This may happen on unofficial mirrors.
+2026-08-26 10:58:18,734 - aqt.main - ERROR - installer 4980 Failed to locate XML data for Qt version '6.11.0'.
+==============================Suggested follow-up:==============================
+* Please use 'aqt list-qt windows desktop' to show versions available.
+2026-08-26 10:58:32,924 - aqt.main - INFO - installer 3052 aqtinstall(aqt) v3.3.0 on Python 3.10.11 [CPython MSC v.1929 64 bit (AMD64)]
+2026-08-26 10:58:32,924 - aqt.helper - DEBUG - helper 3052 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6103/qt6_6103/Updates.xml.sha256
+2026-08-26 10:58:34,390 - aqt.helper - DEBUG - helper 3052 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/extensions/qtwebengine/6103/msvc2022_64/Updates.xml.sha256
+2026-08-26 10:58:35,623 - aqt.archives - INFO - archives 3052 Found extension qtwebengine
+2026-08-26 10:58:35,623 - aqt.helper - DEBUG - helper 3052 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/extensions/qtpdf/6103/msvc2022_64/Updates.xml.sha256
+2026-08-26 10:58:36,888 - aqt.archives - INFO - archives 3052 Found extension qtpdf
+2026-08-26 10:58:37,163 - aqt.helper - DEBUG - helper 20372 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6103/qt6_6103/qt.qt6.6103.win64_msvc2022_64/6.10.3-0-202603310407qtbase-Windows-Windows_11_24H2-MSVC2022-Windows-Windows_11_24H2-X86_64.7z.sha256
+2026-08-26 10:58:37,794 - aqt.helper - INFO - helper 20372 Downloading qtbase...
+2026-08-26 10:58:37,794 - aqt.installer - DEBUG - installer 20372 Download URL: https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6103/qt6_6103/qt.qt6.6103.win64_msvc2022_64/6.10.3-0-202603310407qtbase-Windows-Windows_11_24H2-MSVC2022-Windows-Windows_11_24H2-X86_64.7z
+2026-08-26 10:58:38,459 - aqt.helper - DEBUG - helper 20372 Asked to redirect(302) to: https://qt.mirror.constant.com/online/qtsdkrepository/windows_x86/desktop/qt6_6103/qt6_6103/qt.qt6.6103.win64_msvc2022_64/6.10.3-0-202603310407qtbase-Windows-Windows_11_24H2-MSVC2022-Windows-Windows_11_24H2-X86_64.7z
+2026-08-26 10:58:38,459 - aqt.helper - INFO - helper 20372 Redirected: qt.mirror.constant.com
+2026-08-26 10:58:45,422 - aqt.installer - INFO - installer 20372 Finished installation of qtbase-Windows-Windows_11_24H2-MSVC2022-Windows-Windows_11_24H2-X86_64.7z in 8.25838530
+2026-08-26 10:58:45,542 - aqt.updater - INFO - updater 3052 Patching C:\Qt\6.10.3\msvc2022_64\bin\qmake.exe
+2026-08-26 10:58:45,542 - aqt.updater - INFO - updater 3052 Patching C:\Qt\6.10.3\msvc2022_64\lib\Qt6Concurrent.prl
+2026-08-26 10:58:45,550 - aqt.updater - INFO - updater 3052 Patching C:\Qt\6.10.3\msvc2022_64\lib\Qt6Concurrentd.prl
+2026-08-26 10:58:45,555 - aqt.updater - INFO - updater 3052 Patching C:\Qt\6.10.3\msvc2022_64\lib\Qt6Core.prl
+2026-08-26 10:58:45,557 - aqt.updater - INFO - updater 3052 Patching C:\Qt\6.10.3\msvc2022_64\lib\Qt6Cored.prl
+2026-08-26 10:58:45,563 - aqt.updater - INFO - updater 3052 Patching C:\Qt\6.10.3\msvc2022_64\lib\Qt6DBus.prl
+2026-08-26 10:58:45,567 - aqt.updater - INFO - updater 3052 Patching C:\Qt\6.10.3\msvc2022_64\lib\Qt6DBusd.prl
+2026-08-26 10:58:45,572 - aqt.updater - INFO - updater 3052 Patching C:\Qt\6.10.3\msvc2022_64\lib\Qt6DeviceDiscoverySupport.prl
+2026-08-26 10:58:45,575 - aqt.updater - INFO - updater 3052 Patching C:\Qt\6.10.3\msvc2022_64\lib\Qt6DeviceDiscoverySupportd.prl
+2026-08-26 10:58:45,579 - aqt.updater - INFO - updater 3052 Patching C:\Qt\6.10.3\msvc2022_64\lib\Qt6EntryPoint.prl
+2026-08-26 10:58:45,585 - aqt.updater - INFO - updater 3052 Patching C:\Qt\6.10.3\msvc2022_64\lib\Qt6EntryPointd.prl
+2026-08-26 10:58:45,588 - aqt.updater - INFO - updater 3052 Patching C:\Qt\6.10.3\msvc2022_64\lib\Qt6ExampleIcons.prl
+2026-08-26 10:58:45,588 - aqt.updater - INFO - updater 3052 Patching C:\Qt\6.10.3\msvc2022_64\lib\Qt6ExampleIconsd.prl
+2026-08-26 10:58:45,597 - aqt.updater - INFO - updater 3052 Patching C:\Qt\6.10.3\msvc2022_64\lib\Qt6ExamplesAssetDownloader.prl
+2026-08-26 10:58:45,603 - aqt.updater - INFO - updater 3052 Patching C:\Qt\6.10.3\msvc2022_64\lib\Qt6ExamplesAssetDownloaderd.prl
+2026-08-26 10:58:45,608 - aqt.updater - INFO - updater 3052 Patching C:\Qt\6.10.3\msvc2022_64\lib\Qt6FbSupport.prl
+2026-08-26 10:58:45,611 - aqt.updater - INFO - updater 3052 Patching C:\Qt\6.10.3\msvc2022_64\lib\Qt6FbSupportd.prl
+2026-08-26 10:58:45,613 - aqt.updater - INFO - updater 3052 Patching C:\Qt\6.10.3\msvc2022_64\lib\Qt6Gui.prl
+2026-08-26 10:58:45,620 - aqt.updater - INFO - updater 3052 Patching C:\Qt\6.10.3\msvc2022_64\lib\Qt6Guid.prl
+2026-08-26 10:58:45,626 - aqt.updater - INFO - updater 3052 Patching C:\Qt\6.10.3\msvc2022_64\lib\Qt6Network.prl
+2026-08-26 10:58:45,629 - aqt.updater - INFO - updater 3052 Patching C:\Qt\6.10.3\msvc2022_64\lib\Qt6Networkd.prl
+2026-08-26 10:58:45,633 - aqt.updater - INFO - updater 3052 Patching C:\Qt\6.10.3\msvc2022_64\lib\Qt6OpenGL.prl
+2026-08-26 10:58:45,639 - aqt.updater - INFO - updater 3052 Patching C:\Qt\6.10.3\msvc2022_64\lib\Qt6OpenGLd.prl
+2026-08-26 10:58:45,639 - aqt.updater - INFO - updater 3052 Patching C:\Qt\6.10.3\msvc2022_64\lib\Qt6OpenGLWidgets.prl
+2026-08-26 10:58:45,645 - aqt.updater - INFO - updater 3052 Patching C:\Qt\6.10.3\msvc2022_64\lib\Qt6OpenGLWidgetsd.prl
+2026-08-26 10:58:45,645 - aqt.updater - INFO - updater 3052 Patching C:\Qt\6.10.3\msvc2022_64\lib\Qt6PrintSupport.prl
+2026-08-26 10:58:45,655 - aqt.updater - INFO - updater 3052 Patching C:\Qt\6.10.3\msvc2022_64\lib\Qt6PrintSupportd.prl
+2026-08-26 10:58:45,661 - aqt.updater - INFO - updater 3052 Patching C:\Qt\6.10.3\msvc2022_64\lib\Qt6Sql.prl
+2026-08-26 10:58:45,665 - aqt.updater - INFO - updater 3052 Patching C:\Qt\6.10.3\msvc2022_64\lib\Qt6Sqld.prl
+2026-08-26 10:58:45,669 - aqt.updater - INFO - updater 3052 Patching C:\Qt\6.10.3\msvc2022_64\lib\Qt6Test.prl
+2026-08-26 10:58:45,673 - aqt.updater - INFO - updater 3052 Patching C:\Qt\6.10.3\msvc2022_64\lib\Qt6Testd.prl
+2026-08-26 10:58:45,677 - aqt.updater - INFO - updater 3052 Patching C:\Qt\6.10.3\msvc2022_64\lib\Qt6Widgets.prl
+2026-08-26 10:58:45,683 - aqt.updater - INFO - updater 3052 Patching C:\Qt\6.10.3\msvc2022_64\lib\Qt6Widgetsd.prl
+2026-08-26 10:58:45,685 - aqt.updater - INFO - updater 3052 Patching C:\Qt\6.10.3\msvc2022_64\lib\Qt6Xml.prl
+2026-08-26 10:58:45,691 - aqt.updater - INFO - updater 3052 Patching C:\Qt\6.10.3\msvc2022_64\lib\Qt6Xmld.prl
+2026-08-26 10:58:45,694 - aqt.main - INFO - installer 3052 Finished installation
+2026-08-26 10:58:45,694 - aqt.main - INFO - installer 3052 Time elapsed: 12.77130950 second
+2026-08-26 17:50:44,277 - aqt.main - INFO - installer 130857526001664 aqtinstall(aqt) v3.3.0 on Python 3.10.12 [CPython GCC 11.4.0]
+2026-08-26 17:50:44,278 - aqt.helper - DEBUG - helper 130857526001664 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_6103/qt6_6103/Updates.xml.sha256
+2026-08-26 17:50:46,335 - aqt.helper - DEBUG - helper 130857526001664 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/linux_x64/extensions/qtwebengine/6103/x86_64/Updates.xml.sha256
+2026-08-26 17:50:48,120 - aqt.archives - INFO - archives 130857526001664 Found extension qtwebengine
+2026-08-26 17:50:48,122 - aqt.helper - DEBUG - helper 130857526001664 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/linux_x64/extensions/qtpdf/6103/x86_64/Updates.xml.sha256
+2026-08-26 17:50:49,757 - aqt.archives - INFO - archives 130857526001664 Found extension qtpdf
+2026-08-26 17:50:50,015 - aqt.helper - DEBUG - helper 123550765793280 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_6103/qt6_6103/qt.qt6.6103.linux_gcc_64/6.10.3-0-202603310406qtbase-Linux-RHEL_9_4-GCC-Linux-RHEL_9_4-X86_64.7z.sha256
+2026-08-26 17:50:50,949 - aqt.helper - INFO - helper 123550765793280 Downloading qtbase...
+2026-08-26 17:50:50,950 - aqt.installer - DEBUG - installer 123550765793280 Download URL: https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_6103/qt6_6103/qt.qt6.6103.linux_gcc_64/6.10.3-0-202603310406qtbase-Linux-RHEL_9_4-GCC-Linux-RHEL_9_4-X86_64.7z
+2026-08-26 17:50:51,807 - aqt.helper - DEBUG - helper 123550765793280 Asked to redirect(302) to: https://qt.mirror.constant.com/online/qtsdkrepository/linux_x64/desktop/qt6_6103/qt6_6103/qt.qt6.6103.linux_gcc_64/6.10.3-0-202603310406qtbase-Linux-RHEL_9_4-GCC-Linux-RHEL_9_4-X86_64.7z
+2026-08-26 17:50:51,808 - aqt.helper - INFO - helper 123550765793280 Redirected: qt.mirror.constant.com
+2026-08-26 17:51:00,492 - aqt.installer - INFO - installer 123550765793280 Finished installation of qtbase-Linux-RHEL_9_4-GCC-Linux-RHEL_9_4-X86_64.7z in 10.47816836
+2026-08-26 17:51:00,583 - aqt.updater - INFO - updater 130857526001664 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/pkgconfig/Qt6PrintSupport.pc
+2026-08-26 17:51:00,583 - aqt.updater - INFO - updater 130857526001664 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/pkgconfig/Qt6Xml.pc
+2026-08-26 17:51:00,584 - aqt.updater - INFO - updater 130857526001664 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/pkgconfig/Qt6Network.pc
+2026-08-26 17:51:00,584 - aqt.updater - INFO - updater 130857526001664 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/pkgconfig/Qt6OpenGL.pc
+2026-08-26 17:51:00,584 - aqt.updater - INFO - updater 130857526001664 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/pkgconfig/Qt6Platform.pc
+2026-08-26 17:51:00,584 - aqt.updater - INFO - updater 130857526001664 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/pkgconfig/Qt6Concurrent.pc
+2026-08-26 17:51:00,585 - aqt.updater - INFO - updater 130857526001664 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/pkgconfig/Qt6Core.pc
+2026-08-26 17:51:00,585 - aqt.updater - INFO - updater 130857526001664 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/pkgconfig/Qt6DBus.pc
+2026-08-26 17:51:00,587 - aqt.updater - INFO - updater 130857526001664 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/pkgconfig/Qt6OpenGLWidgets.pc
+2026-08-26 17:51:00,588 - aqt.updater - INFO - updater 130857526001664 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/pkgconfig/Qt6WaylandClient.pc
+2026-08-26 17:51:00,588 - aqt.updater - INFO - updater 130857526001664 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/pkgconfig/Qt6Sql.pc
+2026-08-26 17:51:00,588 - aqt.updater - INFO - updater 130857526001664 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/pkgconfig/Qt6Widgets.pc
+2026-08-26 17:51:00,588 - aqt.updater - INFO - updater 130857526001664 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/pkgconfig/Qt6Test.pc
+2026-08-26 17:51:00,588 - aqt.updater - INFO - updater 130857526001664 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/pkgconfig/Qt6Gui.pc
+2026-08-26 17:51:00,589 - aqt.updater - INFO - updater 130857526001664 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6WaylandClient.prl
+2026-08-26 17:51:00,589 - aqt.updater - INFO - updater 130857526001664 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6WlShellIntegration.prl
+2026-08-26 17:51:00,589 - aqt.updater - INFO - updater 130857526001664 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6EglFSDeviceIntegration.prl
+2026-08-26 17:51:00,590 - aqt.updater - INFO - updater 130857526001664 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6KmsSupport.prl
+2026-08-26 17:51:00,590 - aqt.updater - INFO - updater 130857526001664 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6Gui.prl
+2026-08-26 17:51:00,590 - aqt.updater - INFO - updater 130857526001664 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6OpenGLWidgets.prl
+2026-08-26 17:51:00,590 - aqt.updater - INFO - updater 130857526001664 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6EglFsKmsSupport.prl
+2026-08-26 17:51:00,590 - aqt.updater - INFO - updater 130857526001664 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6Sql.prl
+2026-08-26 17:51:00,590 - aqt.updater - INFO - updater 130857526001664 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6Network.prl
+2026-08-26 17:51:00,591 - aqt.updater - INFO - updater 130857526001664 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6Core.prl
+2026-08-26 17:51:00,591 - aqt.updater - INFO - updater 130857526001664 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6Concurrent.prl
+2026-08-26 17:51:00,591 - aqt.updater - INFO - updater 130857526001664 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6Xml.prl
+2026-08-26 17:51:00,591 - aqt.updater - INFO - updater 130857526001664 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6OpenGL.prl
+2026-08-26 17:51:00,591 - aqt.updater - INFO - updater 130857526001664 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6FbSupport.prl
+2026-08-26 17:51:00,592 - aqt.updater - INFO - updater 130857526001664 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6DeviceDiscoverySupport.prl
+2026-08-26 17:51:00,592 - aqt.updater - INFO - updater 130857526001664 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6ExampleIcons.prl
+2026-08-26 17:51:00,592 - aqt.updater - INFO - updater 130857526001664 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6InputSupport.prl
+2026-08-26 17:51:00,592 - aqt.updater - INFO - updater 130857526001664 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6PrintSupport.prl
+2026-08-26 17:51:00,592 - aqt.updater - INFO - updater 130857526001664 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6DBus.prl
+2026-08-26 17:51:00,592 - aqt.updater - INFO - updater 130857526001664 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6Test.prl
+2026-08-26 17:51:00,593 - aqt.updater - INFO - updater 130857526001664 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6ExamplesAssetDownloader.prl
+2026-08-26 17:51:00,593 - aqt.updater - INFO - updater 130857526001664 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6EglFsKmsGbmSupport.prl
+2026-08-26 17:51:00,593 - aqt.updater - INFO - updater 130857526001664 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6Widgets.prl
+2026-08-26 17:51:00,593 - aqt.updater - INFO - updater 130857526001664 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6XcbQpa.prl
+2026-08-26 17:51:00,593 - aqt.main - INFO - installer 130857526001664 Finished installation
+2026-08-26 17:51:00,593 - aqt.main - INFO - installer 130857526001664 Time elapsed: 16.31648642 second
+2026-08-26 18:00:27,590 - aqt.main - INFO - installer 132542266519552 aqtinstall(aqt) v3.3.0 on Python 3.10.12 [CPython GCC 11.4.0]
+2026-08-26 18:00:27,591 - aqt.helper - DEBUG - helper 132542266519552 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_6103/qt6_6103/Updates.xml.sha256
+2026-08-26 18:00:29,653 - aqt.helper - DEBUG - helper 132542266519552 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/linux_x64/extensions/qtwebengine/6103/x86_64/Updates.xml.sha256
+2026-08-26 18:00:31,333 - aqt.archives - INFO - archives 132542266519552 Found extension qtwebengine
+2026-08-26 18:00:31,333 - aqt.helper - DEBUG - helper 132542266519552 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/linux_x64/extensions/qtpdf/6103/x86_64/Updates.xml.sha256
+2026-08-26 18:00:33,030 - aqt.archives - INFO - archives 132542266519552 Found extension qtpdf
+2026-08-26 18:00:33,338 - aqt.helper - DEBUG - helper 129903679221760 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_6103/qt6_6103/qt.qt6.6103.linux_gcc_64/6.10.3-0-202603310406qtbase-Linux-RHEL_9_4-GCC-Linux-RHEL_9_4-X86_64.7z.sha256
+2026-08-26 18:00:33,340 - aqt.helper - DEBUG - helper 137036673957888 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_6103/qt6_6103/qt.qt6.6103.linux_gcc_64/6.10.3-0-202603310406icu-linux-Rhel8.6-x86_64.7z.sha256
+2026-08-26 18:00:34,174 - aqt.helper - INFO - helper 137036673957888 Downloading icu...
+2026-08-26 18:00:34,175 - aqt.installer - DEBUG - installer 137036673957888 Download URL: https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_6103/qt6_6103/qt.qt6.6103.linux_gcc_64/6.10.3-0-202603310406icu-linux-Rhel8.6-x86_64.7z
+2026-08-26 18:00:34,181 - aqt.helper - INFO - helper 129903679221760 Downloading qtbase...
+2026-08-26 18:00:34,181 - aqt.installer - DEBUG - installer 129903679221760 Download URL: https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_6103/qt6_6103/qt.qt6.6103.linux_gcc_64/6.10.3-0-202603310406qtbase-Linux-RHEL_9_4-GCC-Linux-RHEL_9_4-X86_64.7z
+2026-08-26 18:00:35,176 - aqt.helper - DEBUG - helper 137036673957888 Asked to redirect(302) to: https://qt.mirror.constant.com/online/qtsdkrepository/linux_x64/desktop/qt6_6103/qt6_6103/qt.qt6.6103.linux_gcc_64/6.10.3-0-202603310406icu-linux-Rhel8.6-x86_64.7z
+2026-08-26 18:00:35,176 - aqt.helper - DEBUG - helper 129903679221760 Asked to redirect(302) to: https://qt.mirror.constant.com/online/qtsdkrepository/linux_x64/desktop/qt6_6103/qt6_6103/qt.qt6.6103.linux_gcc_64/6.10.3-0-202603310406qtbase-Linux-RHEL_9_4-GCC-Linux-RHEL_9_4-X86_64.7z
+2026-08-26 18:00:35,177 - aqt.helper - INFO - helper 129903679221760 Redirected: qt.mirror.constant.com
+2026-08-26 18:00:35,177 - aqt.helper - INFO - helper 137036673957888 Redirected: qt.mirror.constant.com
+2026-08-26 18:00:40,273 - aqt.installer - INFO - installer 137036673957888 Finished installation of icu-linux-Rhel8.6-x86_64.7z in 6.93471298
+2026-08-26 18:00:46,793 - aqt.installer - INFO - installer 129903679221760 Finished installation of qtbase-Linux-RHEL_9_4-GCC-Linux-RHEL_9_4-X86_64.7z in 13.45649168
+2026-08-26 18:00:46,886 - aqt.updater - INFO - updater 132542266519552 Patching /home/speterman/Qt/6.10.3/gcc_64/bin/qmake
+2026-08-26 18:00:46,890 - aqt.updater - INFO - updater 132542266519552 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/pkgconfig/Qt6PrintSupport.pc
+2026-08-26 18:00:46,891 - aqt.updater - INFO - updater 132542266519552 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/pkgconfig/Qt6Xml.pc
+2026-08-26 18:00:46,891 - aqt.updater - INFO - updater 132542266519552 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/pkgconfig/Qt6Network.pc
+2026-08-26 18:00:46,891 - aqt.updater - INFO - updater 132542266519552 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/pkgconfig/Qt6OpenGL.pc
+2026-08-26 18:00:46,891 - aqt.updater - INFO - updater 132542266519552 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/pkgconfig/Qt6Platform.pc
+2026-08-26 18:00:46,892 - aqt.updater - INFO - updater 132542266519552 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/pkgconfig/Qt6Concurrent.pc
+2026-08-26 18:00:46,892 - aqt.updater - INFO - updater 132542266519552 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/pkgconfig/Qt6Core.pc
+2026-08-26 18:00:46,892 - aqt.updater - INFO - updater 132542266519552 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/pkgconfig/Qt6DBus.pc
+2026-08-26 18:00:46,892 - aqt.updater - INFO - updater 132542266519552 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/pkgconfig/Qt6OpenGLWidgets.pc
+2026-08-26 18:00:46,892 - aqt.updater - INFO - updater 132542266519552 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/pkgconfig/Qt6WaylandClient.pc
+2026-08-26 18:00:46,892 - aqt.updater - INFO - updater 132542266519552 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/pkgconfig/Qt6Sql.pc
+2026-08-26 18:00:46,893 - aqt.updater - INFO - updater 132542266519552 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/pkgconfig/Qt6Widgets.pc
+2026-08-26 18:00:46,893 - aqt.updater - INFO - updater 132542266519552 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/pkgconfig/Qt6Test.pc
+2026-08-26 18:00:46,893 - aqt.updater - INFO - updater 132542266519552 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/pkgconfig/Qt6Gui.pc
+2026-08-26 18:00:46,894 - aqt.updater - INFO - updater 132542266519552 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6WaylandClient.prl
+2026-08-26 18:00:46,894 - aqt.updater - INFO - updater 132542266519552 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6WlShellIntegration.prl
+2026-08-26 18:00:46,894 - aqt.updater - INFO - updater 132542266519552 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6EglFSDeviceIntegration.prl
+2026-08-26 18:00:46,894 - aqt.updater - INFO - updater 132542266519552 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6KmsSupport.prl
+2026-08-26 18:00:46,895 - aqt.updater - INFO - updater 132542266519552 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6Gui.prl
+2026-08-26 18:00:46,895 - aqt.updater - INFO - updater 132542266519552 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6OpenGLWidgets.prl
+2026-08-26 18:00:46,895 - aqt.updater - INFO - updater 132542266519552 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6EglFsKmsSupport.prl
+2026-08-26 18:00:46,895 - aqt.updater - INFO - updater 132542266519552 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6Sql.prl
+2026-08-26 18:00:46,896 - aqt.updater - INFO - updater 132542266519552 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6Network.prl
+2026-08-26 18:00:46,896 - aqt.updater - INFO - updater 132542266519552 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6Core.prl
+2026-08-26 18:00:46,896 - aqt.updater - INFO - updater 132542266519552 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6Concurrent.prl
+2026-08-26 18:00:46,896 - aqt.updater - INFO - updater 132542266519552 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6Xml.prl
+2026-08-26 18:00:46,896 - aqt.updater - INFO - updater 132542266519552 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6OpenGL.prl
+2026-08-26 18:00:46,896 - aqt.updater - INFO - updater 132542266519552 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6FbSupport.prl
+2026-08-26 18:00:46,897 - aqt.updater - INFO - updater 132542266519552 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6DeviceDiscoverySupport.prl
+2026-08-26 18:00:46,897 - aqt.updater - INFO - updater 132542266519552 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6ExampleIcons.prl
+2026-08-26 18:00:46,897 - aqt.updater - INFO - updater 132542266519552 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6InputSupport.prl
+2026-08-26 18:00:46,897 - aqt.updater - INFO - updater 132542266519552 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6PrintSupport.prl
+2026-08-26 18:00:46,897 - aqt.updater - INFO - updater 132542266519552 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6DBus.prl
+2026-08-26 18:00:46,897 - aqt.updater - INFO - updater 132542266519552 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6Test.prl
+2026-08-26 18:00:46,898 - aqt.updater - INFO - updater 132542266519552 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6ExamplesAssetDownloader.prl
+2026-08-26 18:00:46,898 - aqt.updater - INFO - updater 132542266519552 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6EglFsKmsGbmSupport.prl
+2026-08-26 18:00:46,898 - aqt.updater - INFO - updater 132542266519552 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6Widgets.prl
+2026-08-26 18:00:46,898 - aqt.updater - INFO - updater 132542266519552 Patching /home/speterman/Qt/6.10.3/gcc_64/lib/libQt6XcbQpa.prl
+2026-08-26 18:00:46,898 - aqt.main - INFO - installer 132542266519552 Finished installation
+2026-08-26 18:00:46,898 - aqt.main - INFO - installer 132542266519552 Time elapsed: 19.30846723 second

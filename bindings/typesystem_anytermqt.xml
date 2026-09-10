@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- bindings/typesystem_anytermqt.xml
+
+     Declares what crosses into Python and under what name. The package
+     attribute is the importable module name.
+
+     The Qt typesystems are loaded with generate="no": their types are needed
+     to resolve signatures such as QColor, QWidget and QByteArray, but PySide6
+     already provides the bindings for them and generating a second set would
+     be both wasteful and a source of type-identity bugs.
+-->
+<typesystem package="anytermqt">
+
+  <load-typesystem name="typesystem_core.xml" generate="no"/>
+  <load-typesystem name="typesystem_gui.xml" generate="no"/>
+  <load-typesystem name="typesystem_widgets.xml" generate="no"/>
+
+  <!-- generate="no" on the namespace exposes the classes at package level:
+       anytermqt.Palette rather than anytermqt.qtpyte.Palette. The C++ side
+       keeps its namespace; only the Python spelling is flattened. -->
+  <namespace-type name="qtpyte" generate="no">
+
+    <!-- value-type, not object-type: Palette is copyable and has no
+         identity worth preserving across the boundary. Classes deriving
+         from QObject are the opposite case and become object-types. -->
+    <value-type name="Palette"/>
+
+    <!-- object-type: a QObject. It has identity that must survive the round
+         trip, and a parent that owns it. Shiboken tracks both through the
+         QWidget hierarchy typesystem_widgets.xml describes, which is why
+         that file is loaded even though none of its types are generated
+         here. Adding this to a Python layout transfers ownership to the C++
+         parent; getting that wrong shows up as a double free at interpreter
+         shutdown rather than at the call that caused it. -->
+    <object-type name="TerminalWidget">
+
+      <!-- Both palette() overloads are removed rather than bound.
+           Three separate reasons, any one of them sufficient:
+
+           They differ only in constness, which Python cannot express, so
+           one would shadow the other arbitrarily.
+
+           The non-const one returns a mutable reference to a member of a
+           value-type. The generated wrapper copies it, so the documented
+           C++ usage (mutate the reference, then call refresh) would
+           compile, run, report success and change nothing.
+
+           The name collides with QWidget::palette(), which PySide6 already
+           binds and which returns a QPalette. Removing these leaves
+           terminal.palette() resolving to the inherited Qt method, which is
+           what someone reading PySide6 documentation will expect it to do.
+
+           terminalPalette() / setTerminalPalette() carry the terminal's
+           palette across instead. -->
+      <modify-function signature="palette()" remove="all"/>
+      <modify-function signature="palette()const" remove="all"/>
+
+    </object-type>
+
+    <!-- object-type, and abstract: every method a caller drives it through is
+         pure virtual, so Shiboken generates override plumbing and a Python
+         class can subclass this to supply bytes from somewhere the C++ side
+         has never heard of: a paramiko channel, a socket, a fixture. That
+         is the whole reason the interface is expressed in bytes rather than
+         in handles.
+
+         The concrete classes are private to their platform's translation
+         unit and deliberately not declared here. create() returns one of
+         them; it arrives in Python wrapped as PtySession, which is the only
+         type a caller has any business knowing about. -->
+    <object-type name="PtySession">
+
+      <!-- Ownership follows Qt's rule rather than Shiboken's naming
+           heuristic. The return-value heuristic hands a create*() result to
+           Python, which would be wrong here whenever a parent is passed:
+           the parent already owns it, and Python deleting it later would be
+           a double free. Making the result a child of argument 1 states the
+           actual rule.
+
+           With no parent, nothing owns the session but the Python name
+           bound to it: keep a reference, or it is collected while the child
+           process is still running. -->
+      <modify-function signature="create(QObject*)">
+        <modify-argument index="return">
+          <parent index="1" action="add"/>
+        </modify-argument>
+      </modify-function>
+
+    </object-type>
+
+  </namespace-type>
+
+</typesystem>
