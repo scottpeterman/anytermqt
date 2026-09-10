@@ -36,9 +36,6 @@ bytes crossed a network and two terminal conventions before reaching
 
 ## Installing
 
-```sh
-pip install anytermqt-0.1.0-cp39-abi3-win_amd64.whl
-```
 
 Not on PyPI yet. Wheels are built from this tree -- `scripts/wheel.sh` or
 `scripts\wheel.bat`, and `docs/building.md` for what they do.
