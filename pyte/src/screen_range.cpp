@@ -96,7 +96,15 @@ std::string Screen::text_in_range(int start_line, int start_col, int end_line,
     // row_text() instead would be wrong wherever a double-width glyph appears
     // before the cut: it occupies two columns and contributes one character,
     // so the character index and the column index diverge at that point.
-    const auto slice = [this](int line, int from, int to) {
+    // A row that autowrapped continues onto the next one: no newline between
+    // them, and no trimming at the seam, where a trailing space is content
+    // ("foo bar" split at the space must not come back as "foobar").
+    const auto wraps = [this](int line) {
+        const Row *row = store_.at(line);
+        return row != nullptr && !row->empty() && row->back().wraps;
+    };
+
+    const auto slice = [this](int line, int from, int to, bool trim) {
         std::string out;
         const Row *row = store_.at(line);
         if (row == nullptr) {
@@ -112,21 +120,24 @@ std::string Screen::text_in_range(int start_line, int start_col, int end_line,
             }
             append_utf8(out, c.ch == U'\0' ? U' ' : c.ch);
         }
-        trim_trailing_spaces(out);
+        if (trim) {
+            trim_trailing_spaces(out);
+        }
         return out;
     };
 
     if (start_line == end_line) {
-        return slice(start_line, start_col, end_col);
+        return slice(start_line, start_col, end_col, true);
     }
 
-    std::string out = slice(start_line, start_col, cols_);
-    for (int line = start_line + 1; line < end_line; ++line) {
-        out.push_back('\n');
-        out += slice(line, 0, cols_);
+    std::string out = slice(start_line, start_col, cols_, !wraps(start_line));
+    for (int line = start_line + 1; line <= end_line; ++line) {
+        if (!wraps(line - 1)) {
+            out.push_back('\n');
+        }
+        const bool last = line == end_line;
+        out += slice(line, 0, last ? end_col : cols_, last || !wraps(line));
     }
-    out.push_back('\n');
-    out += slice(end_line, 0, end_col);
     return out;
 }
 

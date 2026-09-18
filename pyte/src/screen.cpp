@@ -165,6 +165,9 @@ void Screen::draw(char32_t ch) {
                 cursor_x_ = 0;
             }
         } else {
+            // Mark the row being left before linefeed() moves off it (and,
+            // at the bottom margin, scrolls it into history, flag intact).
+            cell(cols_ - 1, cursor_y_).wraps = true;
             carriage_return();
             linefeed();
         }
@@ -174,12 +177,17 @@ void Screen::draw(char32_t ch) {
     target.ch = ch;
     target.attrs = attrs_;
     target.wide_continuation = false;
+    // An explicit write into the last column un-wraps the row until the next
+    // character actually overflows it. This is what keeps readline redraws
+    // honest: a row that is rewritten and then ends in CR LF is a hard break.
+    target.wraps = false;
 
     if (width == 2 && cursor_x_ + 1 < cols_) {
         Cell &tail = cell(cursor_x_ + 1, cursor_y_);
         tail.ch = U'\0';
         tail.attrs = attrs_;
         tail.wide_continuation = true;
+        tail.wraps = false;
     }
 
     mark_dirty(cursor_y_);

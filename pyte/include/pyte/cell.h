@@ -46,6 +46,10 @@ struct Cell {
     // Right half of a double-width character. Its `ch` is U'\0' and it is never
     // drawn on its own; a renderer paints the wide glyph from the left cell.
     bool wide_continuation = false;
+    // Set on a row's LAST cell when autowrap carried output onto the next
+    // row. A soft wrap, not a line break: copy joins across it. Anything that
+    // blanks the cell (erase, scroll-in) clears it by assigning blank().
+    bool wraps = false;
 };
 
 }  // namespace pyte

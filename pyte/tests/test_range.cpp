@@ -218,3 +218,55 @@ TEST_CASE("text_in_range on the alternate screen sees only the screen") {
     CHECK(s.history_size() == history_before);
     CHECK(s.text_in_range(s.first_line(), 0, s.first_line(), 20) == "primary-1");
 }
+TEST_CASE("text_in_range joins soft-wrapped rows") {
+    // An ssh-rsa key is one line that the screen wraps. Copying it back out
+    // with a newline at every row boundary breaks it on paste.
+    Screen s(20, 6, 100);
+    const std::string key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC7 user@host";
+    writeLine(s, key);
+    write(s, "next");
+
+    const int first = s.base_line();
+    CHECK(s.text_in_range(first, 0, first + 3, 20) == key + "\nnext");
+
+    // Starting mid-row still joins.
+    CHECK(s.text_in_range(first, 8, first + 2, 20) == key.substr(8));
+}
+
+TEST_CASE("a space at the wrap seam is kept") {
+    Screen s(10, 4, 100);
+    // "abcdefghi " fills row 0 with the space in column 9; "jk" wraps.
+    write(s, "abcdefghi jk");
+    const int first = s.base_line();
+    CHECK(s.text_in_range(first, 0, first + 1, 10) == "abcdefghi jk");
+}
+
+TEST_CASE("a line that exactly fills the row is a hard break") {
+    // Pending wrap followed by CR LF: no character overflowed, so no join.
+    Screen s(10, 4, 100);
+    writeLine(s, "0123456789");
+    write(s, "abc");
+    const int first = s.base_line();
+    CHECK(s.text_in_range(first, 0, first + 1, 10) == "0123456789\nabc");
+}
+
+TEST_CASE("soft-wrap survives scrolling into history") {
+    Screen s(10, 3, 100);
+    writeLine(s, "aaaaaaaaaabbbbb");
+    for (int i = 0; i < 6; ++i) {
+        writeLine(s, "x");
+    }
+    REQUIRE(s.history_size() >= 2);
+    CHECK(s.text_in_range(s.first_line(), 0, s.first_line() + 1, 10) ==
+          "aaaaaaaaaabbbbb");
+}
+
+TEST_CASE("erasing a wrapped row clears the join") {
+    Screen s(10, 4, 100);
+    write(s, "aaaaaaaaaabbb");
+    s.cursor_up(1);
+    s.carriage_return();
+    s.erase_in_line(2);
+    const int first = s.base_line();
+    CHECK(s.text_in_range(first, 0, first + 1, 10) == "\nbbb");
+}

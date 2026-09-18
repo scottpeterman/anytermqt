@@ -25,8 +25,19 @@
 namespace qtpyte {
 namespace {
 
-// How long a pointer may rest past the edge before the next scroll step.
-constexpr int kAutoScrollIntervalMs = 60;
+// Auto-scroll tick. Speed comes from how many lines each tick moves, not
+// from the interval, so this stays fixed.
+constexpr int kAutoScrollIntervalMs = 30;
+
+// Lines per tick, from how far past the edge the pointer is. Just over the
+// edge is one line (~33/s), for landing precisely; each further row of
+// overshoot doubles it, up to a full page per tick (~33 pages/s), so a drag
+// through thousands of lines of scrollback takes a second, not minutes.
+int autoScrollStep(int overshootPx, int cellH, int pageLines) {
+    const int rowsOut = overshootPx / std::max(1, cellH);
+    const int step = 1 << std::min(rowsOut, 10);
+    return std::clamp(step, 1, std::max(1, pageLines));
+}
 
 // A word, for the purposes of double-click. Wider than isalnum on purpose:
 // in a terminal the thing worth selecting is usually a path, a URL, an
@@ -224,8 +235,25 @@ void TerminalWidget::updateAutoScroll(const QPoint &pos) {
         autoscroll_ = new QTimer(this);
         connect(autoscroll_, &QTimer::timeout, this, [this]() {
             QScrollBar *bar = verticalScrollBar();
-            const int next = bar->value() + autoscroll_dir_;
-            if (next < bar->minimum() || next > bar->maximum()) {
+
+            // Distance is read on every tick from the last drag position, so
+            // moving further out (or back in) changes speed without restarting
+            // the timer. A pointer held still keeps its speed.
+            const int h = viewport()->height();
+            const int overshoot = autoscroll_dir_ < 0
+                                      ? -last_drag_pos_.y()
+                                      : last_drag_pos_.y() - h;
+            const int step = autoScrollStep(overshoot, cell_h_, rows_);
+
+            const int current = bar->value();
+            const int next = std::clamp(current + autoscroll_dir_ * step,
+                                        bar->minimum(), bar->maximum());
+            if (next == current) {
+                // Pinned at the top or bottom of history. Extend once more so
+                // the selection reaches the first/last line, then stop.
+                QPoint edge = last_drag_pos_;
+                edge.setY(autoscroll_dir_ < 0 ? 0 : h - 1);
+                extendFocusTo(edge);
                 stopAutoScroll();
                 return;
             }
@@ -235,7 +263,7 @@ void TerminalWidget::updateAutoScroll(const QPoint &pos) {
             // selection stops growing the moment the pointer leaves the
             // widget, which looks like the drag was dropped.
             QPoint edge = last_drag_pos_;
-            edge.setY(autoscroll_dir_ < 0 ? 0 : viewport()->height() - 1);
+            edge.setY(autoscroll_dir_ < 0 ? 0 : h - 1);
             extendFocusTo(edge);
         });
     }
