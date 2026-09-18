@@ -29,7 +29,7 @@ build-backend = "scikit_build_core.build"
 
 [project]
 name = "anytermqt"
-version = "0.1.0"
+version = "0.1.1"
 description = "A native Qt terminal widget for PySide6"
 readme = "README.md"
 # SPDX expression rather than a table. `license = { file = "LICENSE" }` and the
