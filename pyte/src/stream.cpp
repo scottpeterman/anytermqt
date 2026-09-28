@@ -267,6 +267,24 @@ void Stream::escape_dispatch(unsigned char byte) {
 }
 
 void Stream::csi_dispatch(unsigned char final_byte) {
+    // A private marker makes it a different sequence that happens to share the
+    // final byte. Vim sends CSI > 4;2 m (XTMODKEYS) on entry and CSI > 4;m on
+    // exit -- after ?1049l -- which run as SGR would turn underline on for the
+    // shell. Same trap for kitty keyboard (CSI > 1 u, CSI ? u, CSI < u),
+    // XTSAVE/XTRESTORE (CSI ? s, CSI ? r) and XTQMODKEYS (CSI ? 4 m). None of
+    // them touch the buffer, so they are consumed without effect.
+    if (private_marker_ != '\0') {
+        switch (final_byte) {
+            case 'm':
+            case 'r':
+            case 's':
+            case 'u':
+                return;
+            default:
+                break;
+        }
+    }
+
     switch (final_byte) {
         case 'A': screen_.cursor_up(param(0, 1)); break;
         case 'B': screen_.cursor_down(param(0, 1)); break;
