@@ -53,6 +53,11 @@ public:
     void send(const QString &text);
     void paste(const QString &text);
 
+    // True while the application has DECSET ?2004 on. paste() wraps on its
+    // own; a caller that delivers a paste in pieces through send() needs this
+    // to put the markers around the whole delivery itself.
+    bool bracketedPaste() const { return bracketed_paste_; }
+
     // The font decides the cell size and so the grid: setting it re-derives
     // rows and columns and tells the child.
     void setTerminalFont(const QFont &font);
